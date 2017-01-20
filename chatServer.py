@@ -7,7 +7,7 @@ socketio = SocketIO(app)
 
 @socketio.on('message')
 def handleMessage(msg):
-    print("Message" + msg)
+    print("Message : " + msg)
     send(msg, broadcast=True)
 
 @app.route('/', methods=['GET', 'POST'])
